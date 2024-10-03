@@ -17,6 +17,13 @@
 .text-bright {
     color: var(--light);
 }
+.text-brighter {
+    color: var(--secondary);
+}
+
+.bg-brighter {
+    background-color: var(--secondary);
+}
 
 .hero-header {
     background: linear-gradient(rgba(20,20,31,0.7), rgba(20,20,31,0.7)), url(./images/back.png);

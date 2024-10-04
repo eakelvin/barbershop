@@ -14,6 +14,11 @@
     font-size: 40px;
 }
 
+.toggle-icon {
+    color: var(--secondary);
+    font-size: 20px;
+}
+
 .text-bright {
     color: var(--light);
 }
@@ -43,4 +48,17 @@
     height: 250px;
     width: 2px;
     background-color: #E9C664;
+}
+
+.horizontal {
+    height: 2px;
+    width: 200px;
+    background-color: #E9C664;
+}
+
+.service-header {
+    background: linear-gradient(rgba(20,20,31,0.7), rgba(20,20,31,0.7)), url(./images/blog.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

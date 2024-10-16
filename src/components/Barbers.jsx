@@ -14,7 +14,7 @@ const Barbers = () => {
             <div className="row g-3">
                 <div className="col-sm-6 col-md-4">
                     <div className="card text-center text-bg-dark">
-                        <img src="./src/assets/b1.jpg" className="card-img-top" alt="..." />
+                        <img src="/b1.jpg" className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">MARLON MACDONALD</h5>
                             <div className="my-2">
@@ -30,7 +30,7 @@ const Barbers = () => {
                 </div>
                 <div className="col-sm-6 col-md-4">
                     <div className="card text-center text-bg-dark">
-                        <img src="./src/assets/b2.jpg" className="card-img-top" alt="..." />
+                        <img src="/b2.jpg" className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">JERRY BANKS</h5>
                             <div className="my-2">
@@ -46,7 +46,7 @@ const Barbers = () => {
                 </div>
                 <div className="col-sm-6 col-md-4">
                     <div className="card text-center text-bg-dark">
-                        <img src="./src/assets/b3.jpg" className="card-img-top" alt="..." />
+                        <img src="/b3.jpg" className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">JOHN BAILEY</h5>
                             <div className="my-2">
@@ -62,7 +62,7 @@ const Barbers = () => {
                 </div>
                 <div className="col-sm-6 col-md-4">
                     <div className="card text-center text-bg-dark">
-                        <img src="./src/assets/b4.jpg" className="card-img-top" alt="..." />
+                        <img src="/b4.jpg" className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">DAVID BROOKS</h5>
                             <div className="my-2">
@@ -78,7 +78,7 @@ const Barbers = () => {
                 </div>
                 <div className="col-sm-6 col-md-4">
                     <div className="card text-center text-bg-dark">
-                        <img src="./src/assets/b5.jpg" className="card-img-top" alt="..." />
+                        <img src="/b5.jpg" className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">SAINT MOORE</h5>
                             <div className="my-2">
@@ -94,7 +94,7 @@ const Barbers = () => {
                 </div>
                 <div className="col-sm-6 col-md-4">
                     <div className="card text-center text-bg-dark">
-                        <img src="./src/assets/b6.jpg" className="card-img-top" alt="..." />
+                        <img src="/b6.jpg" className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">JEFF BAILEY</h5>
                             <div className="my-2">

@@ -8,53 +8,53 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 const NavigationBar = () => {
   return (
     <div>
-        {/* <nav 
-            class="navbar navbar-expand-lg bg-body-tertiary hero-header"
+        <nav 
+            className="navbar navbar-expand-lg bg-body-tertiary hero-header"
             data-bs-theme="dark" 
         >
-            <div class="container">
-                <Link to={'/'} class="navbar-brand">BARBERSHOP</Link>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="toggle-icon bi-list"></i>
+            <div className="container">
+                <Link to={'/'} className="navbar-brand">BARBERSHOP</Link>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <i className="toggle-icon bi-list"></i>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <Link to={'/'} class="nav-link active" aria-current="page">
+                <div className="collapse navbar-collapse" id="navbarText">
+                    <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li className="nav-item">
+                            <Link to={'/'} className="nav-link active" aria-current="page">
                                 Home
                             </Link>
                         </li>
-                        <li class="nav-item">
-                            <Link to={'/service'} class="nav-link">
+                        <li className="nav-item">
+                            <Link to={'/service'} className="nav-link">
                                 Services
                             </Link>
                         </li>
-                        <li class="nav-item">
-                            <Link to={'/about'} class="nav-link">
+                        <li className="nav-item">
+                            <Link to={'/about'} className="nav-link">
                                 About Us
                             </Link>
                         </li>
-                        <li class="nav-item">
-                            <Link to={'/blog'} class="nav-link">
+                        <li className="nav-item">
+                            <Link to={'/blog'} className="nav-link">
                                 Blog
                             </Link>
                         </li>
-                        <li class="nav-item">
-                            <Link to={'/contact'} class="nav-link">
+                        <li className="nav-item">
+                            <Link to={'/contact'} className="nav-link">
                                 Contact Us
                             </Link>
                         </li>
                     </ul>
-                    <span class="navbar-text">
-                        <button type="button" class="btn btn-outline-warning text-bright rounded-0">
+                    <span className="navbar-text">
+                        <button type="button" className="btn btn-outline-warning text-bright rounded-0">
                             BOOK APPOINTMENT
                         </button>
                     </span>
                 </div>
             </div>
-        </nav> */}
+        </nav>
 
-        <Navbar expand="lg" className="bg-body-tertiary">
+        {/* <Navbar expand="lg" className="bg-body-tertiary">
             <Container>
                 <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -76,7 +76,7 @@ const NavigationBar = () => {
                 </Nav>
                 </Navbar.Collapse>
             </Container>
-        </Navbar>
+        </Navbar> */}
     </div>
   )
 }

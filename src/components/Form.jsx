@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from 'react-bootstrap'
 
 const Form = () => {
   return (
@@ -26,33 +27,38 @@ const Form = () => {
                     <div className="col-md-6">
                         <div className="form-floating">
                         <input type="text" className="form-control rounded-0" id="name" placeholder="Your Name" />
-                        <label for="name">Your Name</label>
+                        <label htmlFor="name">Your Name</label>
                         </div>
                     </div>
                     <div className="col-md-6">
                         <div className="form-floating">
                         <input type="email" className="form-control rounded-0" id="email" placeholder="Your Email" />
-                        <label for="email">Your Email</label>
+                        <label htmlFor="email">Your Email</label>
                         </div>
                     </div>
                     <div className="col-md-12">
                         <div className="form-floating" id="date3">
                         <input type="text" className="form-control rounded-0" id="subject" placeholder="Subject" />
-                        <label for="subject">Subject</label>
+                        <label htmlFor="subject">Subject</label>
                         </div>
                     </div>
 
                     <div className="col-12">
                         <div className="form-floating">
-                        <textarea className="form-control rounded-0" placeholder="Special Request" id="message" style="height: 100px;"></textarea>
-                        <label for="message">Special Request</label>
+                        <textarea 
+                            className="form-control rounded-0" 
+                            placeholder="Special Request"
+                            id="message"
+                            rows="20">
+                        </textarea>
+                        <label htmlFor="message">Special Request</label>
                         </div>
                     </div>
 
                     <div className="col-12">
-                        <button type="button" className="btn btn-outline-warning bg-brighter text-dark rounded-0 w-100">
+                        <Button className="bg-brighter rounded-0 w-100" variant="outline-warning">
                             BOOK APPOINTMENT
-                        </button>
+                        </Button>
                     </div>
 
                     </div>

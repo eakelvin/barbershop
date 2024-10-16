@@ -8,8 +8,8 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import About from './pages/About'
 import Blog from './pages/Blog'
-import Contact from './pages/Contact'
 import Service from './pages/Service'
+import ContactPage from './pages/ContactPage'
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <Route exact path='/signup' element={<Signup />} />
         <Route exact path='/about' element={<About />} />
         <Route exact path='/blog' element={<Blog />} />
-        <Route exact path='/contact' element={<Contact />} />
+        <Route exact path='/contact' element={<ContactPage />} />
         <Route exact path='/service' element={<Service />} />
       </Routes>
     </Router>

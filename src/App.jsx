@@ -9,6 +9,7 @@ import About from './pages/About'
 import Blog from './pages/Blog'
 import Service from './pages/Service'
 import ContactPage from './pages/ContactPage'
+import Appointment from './pages/Appointment'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route exact path='/blog' element={<Blog />} />
         <Route exact path='/contact' element={<ContactPage />} />
         <Route exact path='/service' element={<Service />} />
+        <Route exact path='/appointment' element={<Appointment />} />
       </Routes>
     </Router>
   )

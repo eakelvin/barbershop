@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Discount = () => {
   return (
@@ -8,9 +9,11 @@ const Discount = () => {
             <p className="w-75">
               Need a fresh cut? 💇 Enjoy 25% off all haircuts and services at BarberShop! Book your appointment today and look your best.✂️
             </p>
-            <button type="button" className="btn btn-dark rounded-0 text-brighter">
+            <Link to={'/appointment'}>
+              <button type="button" className="btn btn-dark rounded-0 text-brighter">
                 BOOK NOW
-            </button>
+              </button>
+            </Link>
         </div>
     </section>
   )

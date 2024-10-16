@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const OtherService = () => {
   return (
@@ -67,9 +68,11 @@ const OtherService = () => {
                     <p className="">
                         Need a fresh cut? 💇 Enjoy 25% off all haircuts and services at BarberShop! Book your appointment today and look your best.✂️
                     </p>
-                    <button type="button" className="btn btn-dark rounded-0">
-                        BOOK NOW
-                    </button>
+                    <Link to={'/appointment'}>
+                        <button type="button" className="btn btn-dark rounded-0">
+                            BOOK NOW
+                        </button>
+                    </Link>
                 </div>
             </div>
             <div className="col-md-5 d-none d-md-block">

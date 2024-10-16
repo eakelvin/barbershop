@@ -1,6 +1,7 @@
 import React from 'react'
 import { MdFacebook } from "react-icons/md";
 import { BsTwitterX, BsInstagram } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 
 const Barbers = () => {
   return (
@@ -22,9 +23,11 @@ const Barbers = () => {
                                 <BsTwitterX className='mx-1 toggle-icon' size={20} />
                                 <BsInstagram className='toggle-icon' size={20} />
                             </div>
-                            <button type="button" className="btn btn-outline-warning rounded-0">
-                                BOOK
-                            </button>
+                            <Link to={'/appointment'}>
+                                <button type="button" className="btn btn-outline-warning rounded-0">
+                                    BOOK
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -38,9 +41,11 @@ const Barbers = () => {
                                 <BsTwitterX className='mx-1 toggle-icon' size={20} />
                                 <BsInstagram className='toggle-icon' size={20} />
                             </div>
-                            <button type="button" className="btn btn-outline-warning rounded-0">
-                                BOOK
-                            </button>
+                            <Link to={'/appointment'}>
+                                <button type="button" className="btn btn-outline-warning rounded-0">
+                                    BOOK
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -54,9 +59,11 @@ const Barbers = () => {
                                 <BsTwitterX className='mx-1 toggle-icon' size={20} />
                                 <BsInstagram className='toggle-icon' size={20} />
                             </div>
-                            <button type="button" className="btn btn-outline-warning rounded-0">
-                                BOOK
-                            </button>
+                            <Link to={'/appointment'}>
+                                <button type="button" className="btn btn-outline-warning rounded-0">
+                                    BOOK
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -70,9 +77,11 @@ const Barbers = () => {
                                 <BsTwitterX className='mx-1 toggle-icon' size={20} />
                                 <BsInstagram className='toggle-icon' size={20} />
                             </div>
-                            <button type="button" className="btn btn-outline-warning rounded-0">
-                                BOOK
-                            </button>
+                            <Link to={'/appointment'}>
+                                <button type="button" className="btn btn-outline-warning rounded-0">
+                                    BOOK
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -86,9 +95,11 @@ const Barbers = () => {
                                 <BsTwitterX className='mx-1 toggle-icon' size={20} />
                                 <BsInstagram className='toggle-icon' size={20} />
                             </div>
-                            <button type="button" className="btn btn-outline-warning rounded-0">
-                                BOOK
-                            </button>
+                            <Link to={'/appointment'}>
+                                <button type="button" className="btn btn-outline-warning rounded-0">
+                                    BOOK
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -102,9 +113,11 @@ const Barbers = () => {
                                 <BsTwitterX className='mx-1 toggle-icon' size={20} />
                                 <BsInstagram className='toggle-icon' size={20} />
                             </div>
-                            <button type="button" className="btn btn-outline-warning rounded-0">
-                                BOOK
-                            </button>
+                            <Link to={'/appointment'}>
+                                <button type="button" className="btn btn-outline-warning rounded-0">
+                                    BOOK
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

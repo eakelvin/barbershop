@@ -56,7 +56,7 @@ const Form = () => {
                     </div>
 
                     <div className="col-12">
-                        <Button className="bg-brighter rounded-0 w-100" variant="outline-warning">
+                        <Button className="bg-brighter text-white rounded-0 w-100" variant="outline-warning">
                             BOOK APPOINTMENT
                         </Button>
                     </div>

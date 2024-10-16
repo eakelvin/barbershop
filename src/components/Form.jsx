@@ -49,7 +49,7 @@ const Form = () => {
                             className="form-control rounded-0" 
                             placeholder="Special Request"
                             id="message"
-                            rows="20">
+                            style={{height: '8rem'}}>
                         </textarea>
                         <label htmlFor="message">Special Request</label>
                         </div>

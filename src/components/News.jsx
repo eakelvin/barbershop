@@ -12,7 +12,7 @@ const News = () => {
             <div className="row">
                 <div className="col-sm-6 col-md-3">
                     <div className="card text-bg-dark">
-                        <img src="./src/assets/c1.avif" className="card-img-top" alt="..." />
+                        <img src="/c1.avif" className="card-img-top" alt="..." />
                         <div className="card-body">
                           <h5 className="card-title">
                             Personalized skincare
@@ -28,7 +28,7 @@ const News = () => {
                 </div>
                 <div className="col-sm-6 col-md-3">
                     <div className="card text-bg-dark">
-                        <img src="./src/assets/c2.avif" className="card-img-top" alt="..." />
+                        <img src="/c2.avif" className="card-img-top" alt="..." />
                         <div className="card-body">
                           <h5 className="card-title">
                             Smart beauty devices
@@ -42,7 +42,7 @@ const News = () => {
                 </div>
                 <div className="col-sm-6 col-md-3">
                     <div className="card text-bg-dark">
-                        <img src="./src/assets/c3.avif" className="card-img-top" alt="..." />
+                        <img src="/c3.avif" className="card-img-top" alt="..." />
                         <div className="card-body">
                           <h5 className="card-title">
                             Inclusive product lines
@@ -58,7 +58,7 @@ const News = () => {
                 </div>
                 <div className="col-sm-6 col-md-3">
                     <div className="card text-bg-dark">
-                        <img src="./src/assets/c4.avif" className="card-img-top" alt="..." />
+                        <img src="/c4.avif" className="card-img-top" alt="..." />
                         <div className="card-body">
                           <h5 className="card-title">
                             Representation

@@ -14,7 +14,7 @@ const BlogNews = () => {
             <div className="row g-3">
                 <div className="col-sm-6 col-md-3">
                     <div className="card text-center text-bg-dark">
-                        <img src="./src/assets/c1.avif" className="card-img-top" alt="..." />
+                        <img src="/c1.avif" className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">MARLON MACDONALD</h5>
                             <p className="card-text">
@@ -26,7 +26,7 @@ const BlogNews = () => {
                 </div>
                 <div className="col-sm-6 col-md-3">
                     <div className="card text-center text-bg-dark">
-                        <img src="./src/assets/c2.avif" className="card-img-top" alt="..." />
+                        <img src="/c2.avif" className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">JERRY BANKS</h5>
                             <p className="card-text">
@@ -38,7 +38,7 @@ const BlogNews = () => {
                 </div>
                 <div className="col-sm-6 col-md-3">
                     <div className="card text-center text-bg-dark">
-                        <img src="./src/assets/c3.avif" className="card-img-top" alt="..." />
+                        <img src="/c3.avif" className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">JOHN BAILEY</h5>
                             <p className="card-text">
@@ -50,7 +50,7 @@ const BlogNews = () => {
                 </div>
                 <div className="col-sm-6 col-md-3">
                     <div className="card text-center text-bg-dark">
-                        <img src="./src/assets/c4.avif" className="card-img-top" alt="..." />
+                        <img src="/c4.avif" className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">DAVID BROOKS</h5>
                             <p className="card-text">
@@ -62,7 +62,7 @@ const BlogNews = () => {
                 </div>
                 <div className="col-sm-6 col-md-3">
                     <div className="card text-center text-bg-dark">
-                        <img src="./src/assets/c1.avif" className="card-img-top" alt="..." />
+                        <img src="/c1.avif" className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">SAINT MOORE</h5>
                             <p className="card-text">
@@ -74,7 +74,7 @@ const BlogNews = () => {
                 </div>
                 <div className="col-sm-6 col-md-3">
                     <div className="card text-center text-bg-dark">
-                        <img src="./src/assets/c2.avif" className="card-img-top" alt="..." />
+                        <img src="/c2.avif" className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">JEFF BAILEY</h5>
                             <p className="card-text">
@@ -86,7 +86,7 @@ const BlogNews = () => {
                 </div>
                 <div className="col-sm-6 col-md-3">
                     <div className="card text-center text-bg-dark">
-                        <img src="./src/assets/c3.avif" className="card-img-top" alt="..." />
+                        <img src="/c3.avif" className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">JEFFREY BILLS</h5>
                             <p className="card-text">
@@ -98,7 +98,7 @@ const BlogNews = () => {
                 </div>
                 <div className="col-sm-6 col-md-3">
                     <div className="card text-center text-bg-dark">
-                        <img src="./src/assets/c4.avif" className="card-img-top" alt="..." />
+                        <img src="/c4.avif" className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">MICHAEL MOORE</h5>
                             <p className="card-text">

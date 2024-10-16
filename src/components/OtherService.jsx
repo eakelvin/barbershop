@@ -74,7 +74,7 @@ const OtherService = () => {
             </div>
             <div className="col-md-5 d-none d-md-block">
                 <div className="">
-                    <img src="./src/assets/img.png" className="" alt="" height="280" width="400" />
+                    <img src="/img.png" className="" alt="" height="280" width="400" />
                 </div>
             </div>
         </div>

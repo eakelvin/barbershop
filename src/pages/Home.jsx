@@ -1,23 +1,23 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
 import Stats from '../components/Stats'
 import Discount from '../components/Discount'
 import Review from '../components/Review'
 import Brands from '../components/Brands'
 import Contact from '../components/Contact'
+import NavigationBar from '../components/Navbar'
 
 const Home = () => {
   return (
     <div>
-        <Navbar />
+        <NavigationBar />
 
-        <div class="py-5 hero-header">
-            <div class="d-flex justify-content-center p-5">
-                <img src="./src/assets/Logo.png" class="img-fluid" alt="Logo" width="500" height="500" />
+        <div className="py-5 hero-header">
+            <div className="d-flex justify-content-center p-5">
+                <img src="./src/assets/Logo.png" className="img-fluid" alt="Logo" width="500" height="500" />
             </div>
         </div>
 
-        <img src="./src/assets/Services.png" class="img-fluid" alt="Logo" />
+        <img src="./src/assets/Services.png" className="img-fluid" alt="Logo" />
 
         <Stats />
         <Discount />

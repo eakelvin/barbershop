@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+import NavigationBar from '../components/Navbar'
 import ServiceComp from '../components/ServiceComp'
 import OtherService from '../components/OtherService'
 import Review from '../components/Review'
@@ -9,10 +9,10 @@ import Contact from '../components/Contact'
 const Service = () => {
   return (
     <div>
-        <Navbar />
+        <NavigationBar />
 
-        <div class="py-5 hero-header">
-          <h1 class="text-center text-white fw-semibold display-4">SERVICES</h1>
+        <div className="py-5 hero-header">
+          <h1 className="text-center text-white fw-semibold display-4">SERVICES</h1>
         </div>
 
         <ServiceComp  />

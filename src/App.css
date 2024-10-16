@@ -34,7 +34,7 @@
 }
 
 .sec {
-  border: 1px solid #E9C664;
+  border: 1px solid #E9C664 !important;
 }
 
 .text-sec {
@@ -85,7 +85,7 @@
 }
 
 .service-header {
-  background: linear-gradient(rgba(20,20,31,0.7), rgba(20,20,31,0.7)), url(./images/blog.png);
+  background: linear-gradient(rgba(20,20,31,0.7), rgba(20,20,31,0.7)), url(./src/assets/blog.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -64,12 +64,13 @@ const NavigationBar = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse className='justify-content-center' id="basic-navbar-nav">
                     <Nav className="mx-auto">
-                        <Nav.Link className='active' href="/">Home</Nav.Link>
-                        <Nav.Link href="/service">Services</Nav.Link>
-                        <Nav.Link href="/about">About Us</Nav.Link>
-                        <Nav.Link href="/blog">Blog</Nav.Link>
-                        <Nav.Link href="/contact">Contact</Nav.Link>
+                        <NavLink exact to="/" className="nav-link" activeClassName="active">Home</NavLink>
+                        <NavLink to="/service" className="nav-link" activeClassName="active">Services</NavLink>
+                        <NavLink to="/about" className="nav-link" activeClassName="active">About Us</NavLink>
+                        <NavLink to="/blog" className="nav-link" activeClassName="active">Blog</NavLink>
+                        <NavLink to="/contact" className="nav-link" activeClassName="active">Contact</NavLink>
                     </Nav>
+
                     <span className="navbar-text">
                         <button type="button" className="btn btn-outline-warning text-bright rounded-0">
                             BOOK APPOINTMENT

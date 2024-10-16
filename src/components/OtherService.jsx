@@ -13,7 +13,7 @@ const OtherService = () => {
                             $20
                         </div>
                         <p className="d-flex">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Get a sharp new look with our expert haircut service.
                         </p>
                     </div>
                 </div>
@@ -25,7 +25,7 @@ const OtherService = () => {
                             $13
                         </div>
                         <p className="d-flex">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Get a sharp new look with our expert trim service.
                         </p>
                     </div>
                 </div>
@@ -40,7 +40,7 @@ const OtherService = () => {
                             $13
                         </div>
                         <p className="d-md-flex">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Get a clean and fresh look with our expert shaving service
                         </p>
                     </div>
                 </div>
@@ -52,7 +52,7 @@ const OtherService = () => {
                             $20
                         </div>
                         <p className="d-flex">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Our facial service will leave you feeling and looking your best.
                         </p>
                     </div>
                 </div>
@@ -65,7 +65,7 @@ const OtherService = () => {
                     <h6>THIS WEEKS NEW PRODUCT</h6>
                     <h1 className="fw-bold">25% DISCOUNT</h1>
                     <p className="">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum blanditiis pariatur itaque fuga
+                        Need a fresh cut? 💇 Enjoy 25% off all haircuts and services at BarberShop! Book your appointment today and look your best.✂️
                     </p>
                     <button type="button" className="btn btn-dark rounded-0">
                         BOOK NOW
@@ -74,7 +74,7 @@ const OtherService = () => {
             </div>
             <div className="col-md-5 d-none d-md-block">
                 <div className="">
-                    <img src="./images/img.png" className="" alt="" height="280" width="400" />
+                    <img src="./src/assets/img.png" className="" alt="" height="280" width="400" />
                 </div>
             </div>
         </div>

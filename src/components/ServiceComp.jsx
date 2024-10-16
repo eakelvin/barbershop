@@ -5,9 +5,12 @@ const ServiceComp = () => {
   return (
     <div className="service-header">
         <div className="container p-5">
-            <div className="row flex flex-wrap">
+            <div className="row">
                 <div className="col-sm-6 col-md-4">
-                    <div className="p-4 card sec rounded-0 text-center text-bg-dark mb-3">
+                    <div 
+                        // style={{ height: '16rem' }} /
+                        className="p-4 card sec rounded-0 text-center text-bg-dark mb-3"
+                    >
                         <div className="card-body">
                             <GiHairStrands size={50} className='text-sec' />
                             <h5 className="card-title">HAIRCUT & BEARD TRIM</h5>
@@ -18,7 +21,10 @@ const ServiceComp = () => {
                     </div>
                 </div>
                 <div className="col-sm-6 col-md-4">
-                    <div className="p-4 card sec rounded-0 text-center text-bg-dark mb-3">
+                    <div 
+                        // style={{ height: '16rem' }} 
+                        className="p-4 card sec rounded-0 text-center text-bg-dark mb-3"
+                    >
                         <div className="card-body">
                             <GiHairStrands size={50} className='text-sec' />
                             <h5 className="card-title">SHAVES & HAIRCUT</h5>
@@ -29,7 +35,10 @@ const ServiceComp = () => {
                     </div>
                 </div>
                 <div className="col-sm-6 col-md-4">
-                    <div className="p-4 card sec rounded-0 text-center text-bg-dark mb-3">
+                    <div 
+                        // style={{ height: '16rem' }} 
+                        className="p-4 card sec rounded-0 text-center text-bg-dark mb-3"
+                    >
                         <div className="card-body">
                             <GiHairStrands size={50} className='text-sec' />
                             <h5 className="card-title">FACIAL AND SHAVE</h5>
@@ -40,7 +49,10 @@ const ServiceComp = () => {
                     </div>
                 </div>
                 <div className="col-sm-6 col-md-4">
-                    <div className="p-4 card sec rounded-0 text-center text-bg-dark mb-3">
+                    <div 
+                        // style={{ height: '20rem' }} 
+                        className="p-4 card sec rounded-0 text-center text-bg-dark mb-3"
+                    >
                         <div className="card-body">
                             <GiHairStrands size={50} className='text-sec' />
                             <h5 className="card-title">FACIAL</h5>
@@ -51,7 +63,10 @@ const ServiceComp = () => {
                     </div>
                 </div>
                 <div className="col-sm-6 col-md-4">
-                    <div className="p-4 col card sec rounded-0 text-center text-bg-dark mb-3">
+                    <div 
+                        // style={{ height: '16rem' }} 
+                        className="p-4 col card sec rounded-0 text-center text-bg-dark mb-3"
+                    >
                         <div className="card-body">
                             <GiHairStrands size={50} className='text-sec' />
                             <h5 className="card-title">MUSTACHE TRIMMING</h5>
@@ -62,7 +77,10 @@ const ServiceComp = () => {
                     </div>
                 </div>
                 <div className="col-sm-6 col-md-4">
-                    <div className="p-4 col card sec rounded-0 text-center text-bg-dark mb-3">
+                    <div 
+                        // style={{ height: '16rem' }} 
+                        className="p-4 col card sec rounded-0 text-center text-bg-dark mb-3"
+                    >
                         <div className="card-body">
                             <GiHairStrands size={50} className='text-sec' />
                             <h5 className="card-title">HAIR STYLING</h5>

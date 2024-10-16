@@ -1,4 +1,6 @@
 import React from 'react'
+import { MdFacebook } from "react-icons/md";
+import { BsTwitterX, BsInstagram } from "react-icons/bs";
 
 const Barbers = () => {
   return (
@@ -12,13 +14,13 @@ const Barbers = () => {
             <div className="row g-3">
                 <div className="col-sm-6 col-md-4">
                     <div className="card text-center text-bg-dark">
-                        <img src="./images/b1.jpg" className="card-img-top" alt="..." />
+                        <img src="./src/assets/b1.jpg" className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">MARLON MACDONALD</h5>
                             <div className="my-2">
-                                <i className="toggle-icon bi bi-facebook"></i>
-                                <i className="toggle-icon bi bi-twitter-x"></i>
-                                <i className="toggle-icon bi bi-instagram"></i>
+                                <MdFacebook className='toggle-icon' size={25} />
+                                <BsTwitterX className='mx-1 toggle-icon' size={20} />
+                                <BsInstagram className='toggle-icon' size={20} />
                             </div>
                             <button type="button" className="btn btn-outline-warning rounded-0">
                                 BOOK
@@ -28,13 +30,13 @@ const Barbers = () => {
                 </div>
                 <div className="col-sm-6 col-md-4">
                     <div className="card text-center text-bg-dark">
-                        <img src="./images/b2.jpg" className="card-img-top" alt="..." />
+                        <img src="./src/assets/b2.jpg" className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">JERRY BANKS</h5>
                             <div className="my-2">
-                                <i className="toggle-icon bi bi-facebook"></i>
-                                <i className="toggle-icon bi bi-twitter-x"></i>
-                                <i className="toggle-icon bi bi-instagram"></i>
+                                <MdFacebook className='toggle-icon' size={25} />
+                                <BsTwitterX className='mx-1 toggle-icon' size={20} />
+                                <BsInstagram className='toggle-icon' size={20} />
                             </div>
                             <button type="button" className="btn btn-outline-warning rounded-0">
                                 BOOK
@@ -44,13 +46,13 @@ const Barbers = () => {
                 </div>
                 <div className="col-sm-6 col-md-4">
                     <div className="card text-center text-bg-dark">
-                        <img src="./images/b3.jpg" className="card-img-top" alt="..." />
+                        <img src="./src/assets/b3.jpg" className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">JOHN BAILEY</h5>
                             <div className="my-2">
-                                <i className="toggle-icon bi bi-facebook"></i>
-                                <i className="toggle-icon bi bi-twitter-x"></i>
-                                <i className="toggle-icon bi bi-instagram"></i>
+                                <MdFacebook className='toggle-icon' size={25} />
+                                <BsTwitterX className='mx-1 toggle-icon' size={20} />
+                                <BsInstagram className='toggle-icon' size={20} />
                             </div>
                             <button type="button" className="btn btn-outline-warning rounded-0">
                                 BOOK
@@ -60,13 +62,13 @@ const Barbers = () => {
                 </div>
                 <div className="col-sm-6 col-md-4">
                     <div className="card text-center text-bg-dark">
-                        <img src="./images/b4.jpg" className="card-img-top" alt="..." />
+                        <img src="./src/assets/b4.jpg" className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">DAVID BROOKS</h5>
                             <div className="my-2">
-                                <i className="toggle-icon bi bi-facebook"></i>
-                                <i className="toggle-icon bi bi-twitter-x"></i>
-                                <i className="toggle-icon bi bi-instagram"></i>
+                                <MdFacebook className='toggle-icon' size={25} />
+                                <BsTwitterX className='mx-1 toggle-icon' size={20} />
+                                <BsInstagram className='toggle-icon' size={20} />
                             </div>
                             <button type="button" className="btn btn-outline-warning rounded-0">
                                 BOOK
@@ -76,13 +78,13 @@ const Barbers = () => {
                 </div>
                 <div className="col-sm-6 col-md-4">
                     <div className="card text-center text-bg-dark">
-                        <img src="./images/b5.jpg" className="card-img-top" alt="..." />
+                        <img src="./src/assets/b5.jpg" className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">SAINT MOORE</h5>
                             <div className="my-2">
-                                <i className="toggle-icon bi bi-facebook"></i>
-                                <i className="toggle-icon bi bi-twitter-x"></i>
-                                <i className="toggle-icon bi bi-instagram"></i>
+                                <MdFacebook className='toggle-icon' size={25} />
+                                <BsTwitterX className='mx-1 toggle-icon' size={20} />
+                                <BsInstagram className='toggle-icon' size={20} />
                             </div>
                             <button type="button" className="btn btn-outline-warning rounded-0">
                                 BOOK
@@ -92,13 +94,13 @@ const Barbers = () => {
                 </div>
                 <div className="col-sm-6 col-md-4">
                     <div className="card text-center text-bg-dark">
-                        <img src="./images/b6.jpg" className="card-img-top" alt="..." />
+                        <img src="./src/assets/b6.jpg" className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">JEFF BAILEY</h5>
                             <div className="my-2">
-                                <i className="toggle-icon bi bi-facebook"></i>
-                                <i className="toggle-icon bi bi-twitter-x"></i>
-                                <i className="toggle-icon bi bi-instagram"></i>
+                                <MdFacebook className='toggle-icon' size={25} />
+                                <BsTwitterX className='mx-1 toggle-icon' size={20} />
+                                <BsInstagram className='toggle-icon' size={20} />
                             </div>
                             <button type="button" className="btn btn-outline-warning rounded-0">
                                 BOOK

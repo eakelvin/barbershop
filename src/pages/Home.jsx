@@ -13,11 +13,11 @@ const Home = () => {
 
         <div className="py-5 hero-header">
             <div className="d-flex justify-content-center p-5">
-                <img src="./src/assets/Logo.png" className="img-fluid" alt="Logo" width="500" height="500" />
+                <img src="/Logo.png" className="img-fluid" alt="Logo" width="500" height="500" />
             </div>
         </div>
 
-        <img src="./src/assets/Services.png" className="img-fluid" alt="Logo" />
+        <img src="/Services.png" className="img-fluid" alt="Logo" />
 
         <Stats />
         <Discount />

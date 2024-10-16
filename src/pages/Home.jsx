@@ -5,10 +5,11 @@ import Review from '../components/Review'
 import Brands from '../components/Brands'
 import Contact from '../components/Contact'
 import NavigationBar from '../components/Navbar'
+import { Col, Row } from 'react-bootstrap'
 
 const Home = () => {
   return (
-    <div>
+    <div className='overflow-x-hidden'>
         <NavigationBar />
 
         <div className="py-5 hero-header">
@@ -17,7 +18,22 @@ const Home = () => {
             </div>
         </div>
 
-        <img src="/Services.png" className="img-fluid" alt="Logo" />
+        <Row className='bg-dark mb-1' xs={1} md={2}>
+          <Col>
+            <img 
+              src="/Services.png" 
+              className="img-fluid" 
+              alt="Logo" 
+            />
+          </Col>
+          <Col>
+            <img 
+              src="/barb.jpg" 
+              className="img-fluid" 
+              alt="Logo" 
+            />
+          </Col>
+        </Row>
 
         <Stats />
         <Discount />

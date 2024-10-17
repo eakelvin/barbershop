@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -6,6 +6,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Button, Stack } from 'react-bootstrap';
 
 const NavigationBar = () => {
+    const [auth, isAuth] = useState(false);
+
   return (
     <div>
         <Navbar 
@@ -26,31 +28,38 @@ const NavigationBar = () => {
                     </Nav>
 
                     <Stack className="col-12 d-lg-none" gap={3}>
-                        <Link to={'/login'}>
-                            <Button variant='dark' className='rounded-0'>
-                                Login
-                            </Button>
-                        </Link>
+                        {auth ? (
+                            <p>HI</p>
+                        ): (
+                            <Link to={'/login'}>
+                                <Button variant='dark' className='w-100 rounded-0'>
+                                    Login
+                                </Button>
+                            </Link>
+                        )}
                         <Link to={'/appointment'}>
-                            <button type="button" className="btn btn-outline-warning text-bright rounded-0">
+                            <button type="button" className="w-100 btn btn-outline-warning text-bright rounded-0">
                                 BOOK APPOINTMENT
                             </button>
                         </Link>
                     </Stack>
 
                     <Stack className='d-none d-lg-block' direction="horizontal">
-                        <Link to={'/login'}>
-                            <Button variant='dark' className='rounded-0'>
-                                Login
-                            </Button>
-                        </Link>
+                        {auth ? (
+                            <p>HI</p>
+                        ): (
+                            <Link to={'/login'}>
+                                <Button variant='dark' className='rounded-0'>
+                                    Login
+                                </Button>
+                            </Link>
+                        )}
                         <Link to={'/appointment'}>
                             <button type="button" className="btn btn-outline-warning text-bright rounded-0">
                                 BOOK APPOINTMENT
                             </button>
                         </Link>
                     </Stack>
-                   
                 </Navbar.Collapse>
             </Container>
         </Navbar>

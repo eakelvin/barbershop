@@ -58,6 +58,13 @@
   background-size: cover;
 }
 
+.booking {
+  background: linear-gradient(rgba(15, 23, 43, 0.7), rgba(15, 23, 43, 0.7)), url(/back.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .line {
   height: 250px;
   width: 2px;

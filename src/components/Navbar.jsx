@@ -20,11 +20,11 @@ const NavigationBar = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse className='justify-content-center' id="basic-navbar-nav">
                     <Nav className="mx-auto">
-                        <NavLink exact to="/" className="nav-link" activeclassName="active">Home</NavLink>
-                        <NavLink to="/service" className="nav-link" activeclassName="active">Services</NavLink>
-                        <NavLink to="/about" className="nav-link" activeclassName="active">About Us</NavLink>
-                        <NavLink to="/blog" className="nav-link" activeclassName="active">Blog</NavLink>
-                        <NavLink to="/contact" className="nav-link" activeclassName="active">Contact</NavLink>
+                        <NavLink exact="true" to="/" className="nav-link">Home</NavLink>
+                        <NavLink to="/service" className="nav-link">Services</NavLink>
+                        <NavLink to="/about" className="nav-link">About Us</NavLink>
+                        <NavLink to="/blog" className="nav-link">Blog</NavLink>
+                        <NavLink to="/contact" className="nav-link">Contact</NavLink>
                     </Nav>
 
                     <Stack className="col-12 d-lg-none" gap={3}>

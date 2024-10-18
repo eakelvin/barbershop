@@ -35,8 +35,6 @@ const Signup = () => {
         )
         console.log('User Data:', response)
         if (response.status === 201) {
-          // const { token } = response.data
-          // localStorage.setItem("authToken", token)
           toast.success("Account Created Successfully")
           navigate('/login')
 

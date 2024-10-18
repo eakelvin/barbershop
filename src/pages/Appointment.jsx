@@ -1,7 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NavigationBar from '../components/Navbar'
+import SpinnerComp from '../components/Spinner'
+import toast from 'react-hot-toast'
 
 const Appointment = () => {
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [request, setRequest] = useState("")
+  const [date, setDate] = useState("")
+  const [time, setTime] = useState("")
+  const [loading, setLoading] = useState(false)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const appointment = {
+      name, 
+      email, 
+      request, 
+      date, 
+      time
+    }
+
+    try {
+      setLoading(true)
+      console.log("Appointemt:", appointment)
+      toast.success("Appointment Successfully Booked!")
+
+      setName("")
+      setEmail("")
+      setDate("")
+      setRequest("")
+      setTime("")
+    } catch (error) {
+      console.log(error)
+      toast.error("Appointment was not submitted, Try Again!")
+    } finally {
+      setLoading(false)
+    }
+  };
+
   return (
     <div>
       <NavigationBar />
@@ -13,41 +50,74 @@ const Appointment = () => {
               <h1 className="text-white mb-4">Online Booking</h1>
               <p className="mb-4">
                 Book your appointment online now! Choose your preferred time and barber, and we'll confirm your booking.
-                {/* Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi adipisci voluptas in ex est. Consequuntur labore nihil unde dolorem sapiente, impedit aspernatur iusto, molestiae fugit ea fuga voluptatem deserunt vero. */}
               </p>
               <p className="mb-4">
-              Skip the waitlist! Book your haircut online at your convenience. Our easy-to-use booking system makes it hassle-free.
-                {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis suscipit temporibus enim deleniti cumque, accusantium autem recusandae repellat nostrum dolor ea, amet, aliquid natus nihil in. Debitis, vero quaerat? Deserunt. */}
+                Skip the waitlist! Book your haircut online at your convenience. Our easy-to-use booking system makes it hassle-free.
               </p>
               <p className='mb-4'>
                 Book online and enjoy: Flexible scheduling, personalized service, and no more waiting in line.
               </p>
-              {/* <a href="" className="btn btn-outline-light py-3 px-5 mt-2">Read More</a> */}
             </div>
             <div className="col-md-6">
               <h2 className="text-white mb-4">Book Your Appointment Now</h2>
 
-              <form action="">
+              <form onSubmit={handleSubmit}>
                 <div className="row g-3">
                   <div className="col-md-6">
                     <div className="form-floating">
-                      <input type="text" className="form-control" id="name" placeholder="Your Name" />
+                      <input 
+                        type="text" 
+                        className="form-control" 
+                        id="name"
+                        required 
+                        placeholder="Your Name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)} 
+                      />
                       <label htmlFor="name">Your Name</label>
                     </div>
                   </div>
                   <div className="col-md-6">
                     <div className="form-floating">
-                      <input type="email" className="form-control" id="email" placeholder="Your Email" />
+                      <input 
+                        type="email" 
+                        className="form-control" 
+                        id="email"
+                        required 
+                        placeholder="Your Email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)} 
+                      />
                       <label htmlFor="email">Your Email</label>
                     </div>
                   </div>
                   <div className="col-md-6">
                     <div className="form-floating" id="date3">
-                      <input type="text" className="form-control" id="datetime" />
-                      <label htmlFor="datetime">Date & Time</label>
+                      <input 
+                        type="date" 
+                        className="form-control" 
+                        id="datetime"
+                        required
+                        value={date}
+                        onChange={(e) => setDate(e.target.value)} 
+                      />
+                      <label htmlFor="datetime">Date</label>
                     </div>
                   </div>
                   <div className="col-md-6">
+                    <div className="form-floating" id="date3">
+                      <input 
+                        type="time" 
+                        className="form-control" 
+                        id="datetime"
+                        required
+                        value={time}
+                        onChange={(e) => setTime(e.target.value)} 
+                      />
+                      <label htmlFor="datetime">Time</label>
+                    </div>
+                  </div>
+                  {/* <div className="col-md-6">
                     <div className="form-floating">
                       <select name="" id="select1" className="form-select">
                         <option value="1">Destination 1</option>
@@ -56,13 +126,16 @@ const Appointment = () => {
                       </select>
                       <label htmlFor="select1">Destination</label>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="col-12">
                     <div className="form-floating">
                       <textarea 
                         className="form-control" 
                         placeholder="Special Request" 
-                        id="message" 
+                        id="message"
+                        required
+                        value={request}
+                        onChange={(e) => setRequest(e.target.value)} 
                         style={{height: "100px"}}>
                       </textarea>
                       <label htmlFor="message">Special Request</label>
@@ -71,7 +144,7 @@ const Appointment = () => {
 
                   <div className="col-12">
                     <button className="btn btn-outline-light w-100 py-3" type="submit">
-                      Book Now
+                      {loading ? <SpinnerComp /> : 'Book Now'}
                     </button>
                   </div>
 

@@ -1,12 +1,31 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Button, Stack } from 'react-bootstrap';
+import axios from 'axios';
 
 const NavigationBar = () => {
+    const apiUrl = import.meta.env.VITE_PUBLIC_API_BASE_URL;
     const [auth, isAuth] = useState(false);
+    const [user, setUser] = useState(null);
+    // const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const getUser = async () => {
+            try {
+                const response = axios.get(
+                    `${apiUrl}/auth/user`, 
+                    { withCredentials: true }
+                )
+                console.log('User Data:', response)
+            } catch (error) {
+                console.error('Error fetching profile:', error);
+            }
+        }
+        getUser()
+    }, [])
 
   return (
     <div>

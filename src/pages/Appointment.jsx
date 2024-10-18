@@ -15,7 +15,7 @@ const Appointment = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    
+
     const appointment = {
       name, 
       email, 
@@ -151,9 +151,9 @@ const Appointment = () => {
                   </div>
 
                   <div className="col-12">
-                    <button className="btn btn-outline-light w-100 py-3" type="submit">
+                    <Button variant="outline-light">
                       {loading ? <SpinnerComp /> : 'Book Now'}
-                    </button>
+                    </Button>
                   </div>
 
                 </div>

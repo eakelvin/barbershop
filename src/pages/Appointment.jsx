@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import NavigationBar from '../components/Navbar'
 import SpinnerComp from '../components/Spinner'
 import toast from 'react-hot-toast'
+import axios from 'axios'
 
 const Appointment = () => {
+  const apiUrl = import.meta.env.VITE_PUBLIC_API_BASE_URL;
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [request, setRequest] = useState("")
@@ -11,8 +13,9 @@ const Appointment = () => {
   const [time, setTime] = useState("")
   const [loading, setLoading] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    
     const appointment = {
       name, 
       email, 
@@ -23,14 +26,19 @@ const Appointment = () => {
 
     try {
       setLoading(true)
-      console.log("Appointemt:", appointment)
-      toast.success("Appointment Successfully Booked!")
-
-      setName("")
-      setEmail("")
-      setDate("")
-      setRequest("")
-      setTime("")
+      const response = await axios.post(
+        `${apiUrl}/appointment/create`, 
+        appointment
+      )
+      console.log("Appointemt:", response)
+      if (response.status === 201) {
+        toast.success("Appointment Successfully Booked!")
+        setName("")
+        setEmail("")
+        setDate("")
+        setRequest("")
+        setTime("")
+      }
     } catch (error) {
       console.log(error)
       toast.error("Appointment was not submitted, Try Again!")

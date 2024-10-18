@@ -1,26 +1,45 @@
+import axios from 'axios'
 import React, { useState } from 'react'
 import { Button } from 'react-bootstrap'
 import toast from 'react-hot-toast'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import SpinnerComp from '../components/Spinner'
 
 const Login = () => {
+  const apiUrl = import.meta.env.VITE_PUBLIC_API_BASE_URL;
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [loading, setLoading] = useState(false)
+  const navigate = useNavigate()
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+
     const credentials = {
       email,
       password,
     };
+
     try {
-      console.log('User Data:', credentials)
-      toast.success("Login Successfully, Redirecting...")
+      setLoading(true)
+      const response = await axios.post(
+        `${apiUrl}/auth/login`, 
+        credentials,
+        { withCredentials: true }
+      )
+      console.log('User Data:', response)
+      if (response.status === 201) {
+        toast.success("Login Successfully, Redirecting...")
+        navigate('/')
+
+        setEmail('')
+        setPassword('')
+      }
     } catch (error) {
+      toast.error('Something went wrong. Please try again!');
       console.log(error)
     } finally {
-      setEmail('')
-      setPassword('')
+      setLoading(false)
     }
   };
 
@@ -35,14 +54,13 @@ const Login = () => {
                   <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
                     <p className="text-center h1 fw-bold mx-1 mx-md-4 mt-4">
-                      Sign up
+                      Sign In
                     </p>
                     <p className="mb-5 text-center">Don't have an account? 
                       <Link to={'/signup'} href="">Sign Up</Link>
                     </p>
 
                     <form onSubmit={handleSubmit} className="mx-1 mx-md-4">
-
                       <div className="mb-4">
                         <label htmlFor="email" className="form-label">
                           Email Address
@@ -73,10 +91,9 @@ const Login = () => {
 
                       <div className="d-flex justify-content-center mb-3 mb-lg-4">
                         <Button type='submit' className='w-100'>
-                          Login
+                          {loading ? <SpinnerComp /> : 'Login'}
                         </Button>
                       </div>
-
                     </form>
 
                   </div>

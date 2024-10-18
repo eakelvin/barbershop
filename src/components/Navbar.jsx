@@ -20,16 +20,16 @@ const NavigationBar = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse className='justify-content-center' id="basic-navbar-nav">
                     <Nav className="mx-auto">
-                        <NavLink exact to="/" className="nav-link" activeClassName="active">Home</NavLink>
-                        <NavLink to="/service" className="nav-link" activeClassName="active">Services</NavLink>
-                        <NavLink to="/about" className="nav-link" activeClassName="active">About Us</NavLink>
-                        <NavLink to="/blog" className="nav-link" activeClassName="active">Blog</NavLink>
-                        <NavLink to="/contact" className="nav-link" activeClassName="active">Contact</NavLink>
+                        <NavLink exact to="/" className="nav-link" activeclassName="active">Home</NavLink>
+                        <NavLink to="/service" className="nav-link" activeclassName="active">Services</NavLink>
+                        <NavLink to="/about" className="nav-link" activeclassName="active">About Us</NavLink>
+                        <NavLink to="/blog" className="nav-link" activeclassName="active">Blog</NavLink>
+                        <NavLink to="/contact" className="nav-link" activeclassName="active">Contact</NavLink>
                     </Nav>
 
                     <Stack className="col-12 d-lg-none" gap={3}>
                         {auth ? (
-                            <p>HI</p>
+                            <p className='!text-white'>HI</p>
                         ): (
                             <Link to={'/login'}>
                                 <Button variant='dark' className='w-100 rounded-0'>
@@ -46,7 +46,7 @@ const NavigationBar = () => {
 
                     <Stack className='d-none d-lg-block' direction="horizontal">
                         {auth ? (
-                            <p>HI</p>
+                            <p className='!text-white'>HI</p>
                         ): (
                             <Link to={'/login'}>
                                 <Button variant='dark' className='rounded-0'>

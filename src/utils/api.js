@@ -1,9 +1,10 @@
 import axios from "axios";
+const apiUrl = import.meta.env.VITE_PUBLIC_API_BASE_URL;
 
 export const signup = async (userData) => {
     try {
         const response = await axios.post(
-            `${process.env.REACT_APP_API_BASE_URL}/auth/register`, 
+            `${apiUrl}/auth/register`, 
             userData
         )
         return response
@@ -16,7 +17,7 @@ export const signup = async (userData) => {
 export const login = async (credentials) => {
     try {
         const response = await axios.post(
-            `${process.env.REACT_APP_API_BASE_URL}/auth/login`, 
+            `${apiUrl}/auth/login`, 
             credentials
         )
         return response
@@ -29,7 +30,7 @@ export const login = async (credentials) => {
 export const logout = async () => {
     try {
         const response = await axios.post(
-            `${process.env.REACT_APP_API_BASE_URL}/auth/logout`
+            `${apiUrl}/auth/logout`
         )
     } catch (error) {
         console.log(error)

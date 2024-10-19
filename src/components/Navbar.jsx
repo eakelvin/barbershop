@@ -8,24 +8,28 @@ import axios from 'axios';
 
 const NavigationBar = () => {
     const apiUrl = import.meta.env.VITE_PUBLIC_API_BASE_URL;
-    const [auth, isAuth] = useState(false);
     const [user, setUser] = useState(null);
     // const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const getUser = async () => {
             try {
-                const response = axios.get(
+                const response = await axios.get(
                     `${apiUrl}/auth/user`, 
                     { withCredentials: true }
                 )
                 console.log('User Data:', response)
+                setUser(response.data)
             } catch (error) {
                 console.error('Error fetching profile:', error);
             }
         }
         getUser()
     }, [])
+
+    useEffect(() => {
+        console.log("Fulfilled Promise:", user);
+    }, [user])
 
   return (
     <div>
@@ -47,8 +51,8 @@ const NavigationBar = () => {
                     </Nav>
 
                     <Stack className="col-12 d-lg-none" gap={3}>
-                        {auth ? (
-                            <p className='!text-white'>HI</p>
+                        {user ? (
+                            <p className='!text-white'>{user?.name}</p>
                         ): (
                             <Link to={'/login'}>
                                 <Button variant='dark' className='w-100 rounded-0'>
@@ -64,7 +68,7 @@ const NavigationBar = () => {
                     </Stack>
 
                     <Stack className='d-none d-lg-block' direction="horizontal">
-                        {auth ? (
+                        {user ? (
                             <p className='!text-white'>HI</p>
                         ): (
                             <Link to={'/login'}>

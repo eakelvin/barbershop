@@ -33,7 +33,7 @@ const Signup = () => {
           userData, 
           { withCredentials: true }
         )
-        console.log('User Data:', response)
+        // console.log('SignUp User Data:', response)
         if (response.status === 201) {
           toast.success("Account Created Successfully")
           navigate('/login')

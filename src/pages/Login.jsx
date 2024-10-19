@@ -27,7 +27,7 @@ const Login = () => {
         credentials,
         { withCredentials: true }
       )
-      console.log('User Data:', response)
+      // console.log('Login User Data:', response)
       if (response.status === 201) {
         toast.success("Login Successfully, Redirecting...")
         navigate('/')

@@ -63,7 +63,7 @@ const NavigationBar = () => {
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu>
                                     <Dropdown.Item active>
-                                        <Link to={'/appointment'}>Book Appointment</Link>
+                                        <Link className='text-white' to={'/appointment'}>Book Appointment</Link>
                                     </Dropdown.Item>
                                     <Dropdown.Item href="/">Dashboard</Dropdown.Item>
                                     <Dropdown.Divider />
@@ -95,8 +95,10 @@ const NavigationBar = () => {
                                 id="basic-nav-dropdown" 
                                 className='text-white my-2'
                             >
-                                <NavDropdown.Item href="/appointment">
-                                    Book Appointment
+                                <NavDropdown.Item>
+                                    <Link className='text-white' to={'/appointment'}>
+                                        Book Appointment
+                                    </Link>
                                 </NavDropdown.Item>
                                     <NavDropdown.Item href="/">Dashboard</NavDropdown.Item>
                                     <NavDropdown.Divider />

@@ -3,6 +3,7 @@ import NavigationBar from '../components/Navbar'
 import SpinnerComp from '../components/Spinner'
 import toast from 'react-hot-toast'
 import axios from 'axios'
+import { Button } from 'react-bootstrap'
 
 const Appointment = () => {
   const apiUrl = import.meta.env.VITE_PUBLIC_API_BASE_URL;

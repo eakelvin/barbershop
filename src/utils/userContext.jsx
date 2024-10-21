@@ -1,7 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, createContext } from 'react';
 import axios from 'axios';
 
-const FetchUser = () => {
+export const UserContext = createContext()
+
+const UserProvider = ({ children }) => {
     const apiUrl = import.meta.env.VITE_PUBLIC_API_BASE_URL;
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -26,7 +28,11 @@ const FetchUser = () => {
         getUser();
     }, []);
 
-    return { user, loading, error };
+    return(
+        <UserContext.Provider value={{user, setUser, loading, error}}>
+            {children}
+        </UserContext.Provider>
+    );
 };
 
-export default FetchUser;
+export default UserProvider;

@@ -13,25 +13,28 @@ import Appointment from './pages/Appointment'
 import { Toaster } from 'react-hot-toast'
 import Dashboard from './pages/Dashboard'
 import PrivateRoute from './components/PrivateRoute'
+import UserProvider from './utils/userContext'
 
 function App() {
   return (
     <>
-      <Router>
-        <Routes>
-          <Route exact path='/' element={<Home />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/signup' element={<Signup />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/blog' element={<Blog />} />
-          <Route path='/contact' element={<ContactPage />} />
-          <Route path='/service' element={<Service />} />
-          <Route path='' element={<PrivateRoute />}>
-            <Route path='/appointment' element={<Appointment />} />
-            <Route path='/dashboard' element={<Dashboard />} />
-          </Route>
-        </Routes>
-      </Router>
+      <UserProvider>
+        <Router>
+          <Routes>
+            <Route exact path='/' element={<Home />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/signup' element={<Signup />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/blog' element={<Blog />} />
+            <Route path='/contact' element={<ContactPage />} />
+            <Route path='/service' element={<Service />} />
+            <Route path='' element={<PrivateRoute />}>
+              <Route path='/appointment' element={<Appointment />} />
+              <Route path='/dashboard' element={<Dashboard />} />
+            </Route>
+          </Routes>
+        </Router>
+      </UserProvider>
       <Toaster
         position="top-center"
         reverseOrder={false}

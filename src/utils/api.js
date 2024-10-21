@@ -37,7 +37,7 @@ export const logout = async () => {
         )
         console.log(response.data)
         toast.success(response.data.message)
-        window.location.href()
+        window.location.href = '/'
     } catch (error) {
         console.log(error)
         throw error.response.data;

@@ -1,9 +1,10 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Button } from 'react-bootstrap'
 import toast from 'react-hot-toast'
 import { Link, useNavigate } from 'react-router-dom'
 import SpinnerComp from '../components/Spinner'
+import { UserContext } from '../utils/userContext'
 
 const Login = () => {
   const apiUrl = import.meta.env.VITE_PUBLIC_API_BASE_URL;
@@ -11,6 +12,7 @@ const Login = () => {
   const [password, setPassword] = useState("")
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
+  const { setUser } = useContext(UserContext)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -30,6 +32,7 @@ const Login = () => {
       // console.log('Login User Data:', response)
       if (response.status === 201) {
         toast.success("Login Successfully, Redirecting...")
+        setUser(response.data)
         navigate('/')
 
         setEmail('')

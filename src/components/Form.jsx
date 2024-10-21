@@ -43,6 +43,7 @@ const Form = () => {
             setLoading(false)
         }
     }
+
   return (
     <div className="service-header p-5">
         <div className="row g-5 align-items-center">
@@ -128,7 +129,7 @@ const Form = () => {
                                 className="bg-brighter text-white rounded-0 w-100" 
                                 variant="outline-warning"
                             >
-                                {loading ? <SpinnerComp /> : 'BOOK APPOINTMENT'}
+                                {loading ? <SpinnerComp /> : 'SEND MESSAGE'}
                             </Button>
                         </div>
                     </div>

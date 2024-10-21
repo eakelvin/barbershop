@@ -23,7 +23,7 @@ const NavigationBar = () => {
                     `${apiUrl}/auth/user`, 
                     { withCredentials: true }
                 )
-                console.log('User Data:', response.data)
+                // console.log('User Data:', response.data)
                 setUser(response.data)
             } catch (error) {
                 console.error('Error fetching profile:', error);
@@ -62,15 +62,15 @@ const NavigationBar = () => {
                                     {getInitial(user?.name)}
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu>
-                                    <Dropdown.Item href="/appointment" active>
-                                        Book Appointment
+                                    <Dropdown.Item active>
+                                        <Link to={'/appointment'}>Book Appointment</Link>
                                     </Dropdown.Item>
                                     <Dropdown.Item href="/">Dashboard</Dropdown.Item>
                                     <Dropdown.Divider />
                                     <Dropdown.Item href="">Logout</Dropdown.Item>
                                 </Dropdown.Menu>
                             </Dropdown>
-                        ): (
+                        ):(
                             <div>
                                 <Link to={'/login'}>
                                     <Button variant='dark' className='w-100 rounded-0'>
@@ -95,12 +95,14 @@ const NavigationBar = () => {
                                 id="basic-nav-dropdown" 
                                 className='text-white my-2'
                             >
-                                <NavDropdown.Item href="/appointment">Book Appointment</NavDropdown.Item>
-                                <NavDropdown.Item href="/">Dashboard</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="">Logout</NavDropdown.Item>
-                            </NavDropdown>
-                        ): (
+                                <NavDropdown.Item href="/appointment">
+                                    Book Appointment
+                                </NavDropdown.Item>
+                                    <NavDropdown.Item href="/">Dashboard</NavDropdown.Item>
+                                    <NavDropdown.Divider />
+                                    <NavDropdown.Item onClick={''}>Logout</NavDropdown.Item>
+                                </NavDropdown>
+                        ):(
                             <div>
                                 <Link to={'/login'}>
                                     <Button variant='dark' className='rounded-0'>

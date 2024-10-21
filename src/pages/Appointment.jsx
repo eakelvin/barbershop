@@ -152,7 +152,7 @@ const Appointment = () => {
                   </div>
 
                   <div className="col-12">
-                    <Button variant="outline-light">
+                    <Button className='w-100' variant="outline-light">
                       {loading ? <SpinnerComp /> : 'Book Now'}
                     </Button>
                   </div>

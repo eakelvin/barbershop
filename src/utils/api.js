@@ -30,8 +30,10 @@ export const login = async (credentials) => {
 export const logout = async () => {
     try {
         const response = await axios.post(
-            `${apiUrl}/auth/logout`
+            `${apiUrl}/auth/logout`, 
+            { withCredentials: true }
         )
+        console.log(response.data);
     } catch (error) {
         console.log(error)
         throw error.response.data;

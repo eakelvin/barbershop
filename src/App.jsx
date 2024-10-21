@@ -11,6 +11,8 @@ import Service from './pages/Service'
 import ContactPage from './pages/ContactPage'
 import Appointment from './pages/Appointment'
 import { Toaster } from 'react-hot-toast'
+import Dashboard from './pages/Dashboard'
+import PrivateRoute from './components/PrivateRoute'
 
 function App() {
   return (
@@ -18,13 +20,16 @@ function App() {
       <Router>
         <Routes>
           <Route exact path='/' element={<Home />} />
-          <Route exact path='/login' element={<Login />} />
-          <Route exact path='/signup' element={<Signup />} />
-          <Route exact path='/about' element={<About />} />
-          <Route exact path='/blog' element={<Blog />} />
-          <Route exact path='/contact' element={<ContactPage />} />
-          <Route exact path='/service' element={<Service />} />
-          <Route exact path='/appointment' element={<Appointment />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<Signup />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/blog' element={<Blog />} />
+          <Route path='/contact' element={<ContactPage />} />
+          <Route path='/service' element={<Service />} />
+          <Route path='' element={<PrivateRoute />}>
+            <Route path='/appointment' element={<Appointment />} />
+            <Route path='/dashboard' element={<Dashboard />} />
+          </Route>
         </Routes>
       </Router>
       <Toaster

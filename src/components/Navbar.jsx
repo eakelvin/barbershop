@@ -6,33 +6,20 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Button, Dropdown, Spinner, Stack } from 'react-bootstrap';
 import axios from 'axios';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import FetchUser from '../utils/fetchUser';
+import { getInitial } from '../utils/helper';
+import { logout } from '../utils/api';
 
 const NavigationBar = () => {
-    const apiUrl = import.meta.env.VITE_PUBLIC_API_BASE_URL;
-    const [user, setUser] = useState(null);
-    const [loading, setLoading] = useState(true);
+    const { user, loading, error } = FetchUser();
 
-    const getInitial = (name) => {
-        return name ? name.charAt(0) : ''
-    }
-    
-    useEffect(() => {
-        const getUser = async () => {
-            try {
-                const response = await axios.get(
-                    `${apiUrl}/auth/user`, 
-                    { withCredentials: true }
-                )
-                // console.log('User Data:', response.data)
-                setUser(response.data)
-            } catch (error) {
-                console.error('Error fetching profile:', error);
-            } finally {
-                setLoading(false)
-            }
+    const handleLogout = async () => {
+        try {
+            await logout()
+        } catch (error) {
+            console.log('Failed Logout:', error)
         }
-        getUser()
-    }, [])
+    }
 
   return (
     <div>
@@ -58,16 +45,24 @@ const NavigationBar = () => {
                             <Spinner animation="border" variant='light' />
                         ): user ? (
                             <Dropdown align={'start'}>
-                                <Dropdown.Toggle id="dropdown-button-dark-example1" variant="success">
+                                <Dropdown.Toggle className='rounded-circle' id="dropdown-button-dark-example1" variant="success">
                                     {getInitial(user?.name)}
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu>
                                     <Dropdown.Item active>
-                                        <Link className='text-white' to={'/appointment'}>Book Appointment</Link>
+                                        <Link className='text-white' to={'/appointment'}>
+                                            Book Appointment
+                                        </Link>
                                     </Dropdown.Item>
-                                    <Dropdown.Item href="/">Dashboard</Dropdown.Item>
+                                    <Dropdown.Item>
+                                        <Link className='text-white' to={'/dashboard'}>
+                                            Dashboard
+                                        </Link>
+                                    </Dropdown.Item>
                                     <Dropdown.Divider />
-                                    <Dropdown.Item href="">Logout</Dropdown.Item>
+                                    <Dropdown.Item onClick={handleLogout}>
+                                        Logout
+                                    </Dropdown.Item>
                                 </Dropdown.Menu>
                             </Dropdown>
                         ):(
@@ -100,9 +95,15 @@ const NavigationBar = () => {
                                         Book Appointment
                                     </Link>
                                 </NavDropdown.Item>
-                                    <NavDropdown.Item href="/">Dashboard</NavDropdown.Item>
+                                    <NavDropdown.Item>
+                                        <Link className='text-white' to={'/dashboard'}>
+                                            Dashboard
+                                        </Link>
+                                    </NavDropdown.Item>
                                     <NavDropdown.Divider />
-                                    <NavDropdown.Item onClick={''}>Logout</NavDropdown.Item>
+                                    <NavDropdown.Item onClick={handleLogout}>
+                                        Logout
+                                    </NavDropdown.Item>
                                 </NavDropdown>
                         ):(
                             <div>

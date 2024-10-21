@@ -1,4 +1,5 @@
 import axios from "axios";
+import toast from "react-hot-toast";
 const apiUrl = import.meta.env.VITE_PUBLIC_API_BASE_URL;
 
 export const signup = async (userData) => {
@@ -30,10 +31,13 @@ export const login = async (credentials) => {
 export const logout = async () => {
     try {
         const response = await axios.post(
-            `${apiUrl}/auth/logout`, 
+            `${apiUrl}/auth/logout`,
+            {}, 
             { withCredentials: true }
         )
-        console.log(response.data);
+        console.log(response.data)
+        toast.success(response.data.message)
+        window.location.href()
     } catch (error) {
         console.log(error)
         throw error.response.data;

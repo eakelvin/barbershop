@@ -1,25 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Button, Dropdown, Spinner, Stack } from 'react-bootstrap';
-import axios from 'axios';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import FetchUser from '../utils/fetchUser';
 import { getInitial } from '../utils/helper';
 import { logout } from '../utils/api';
 
 const NavigationBar = () => {
-    const { user, loading, error } = FetchUser();
+    const { user, loading } = FetchUser();
 
     const handleLogout = async () => {
-        try {
-            await logout()
-        } catch (error) {
-            console.log('Failed Logout:', error)
-        }
-    }
+        await logout();
+    };
 
   return (
     <div>

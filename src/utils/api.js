@@ -35,7 +35,7 @@ export const logout = async () => {
             {}, 
             { withCredentials: true }
         )
-        console.log(response.data)
+        // console.log(response.data)
         toast.success(response.data.message)
         window.location.href = '/'
     } catch (error) {
@@ -54,3 +54,42 @@ export const getUser = async () => {
         console.error('Error fetching profile:', error);
     }
 };
+
+export const allAppointments = async () => {
+    try {
+        const response = await axios.get(
+            `${apiUrl}/appointment/all`
+        )
+        // console.log(response.data)
+        return response.data
+    } catch (error) {
+        console.log(error)
+        throw error.response.data;
+    }
+};
+
+export const allMessages = async () => {
+    try {
+        const response = await axios.get(
+            `${apiUrl}/contact/all`
+        )
+        // console.log(response.data)
+        return response.data
+    } catch (error) {
+        console.log(error)
+        throw error.response.data;
+    }
+};
+
+export const allUsers = async () => {
+    try {
+        const response = await axios.get(
+            `${apiUrl}/auth/users`
+        )
+        // console.log(response.data)
+        return response.data
+    } catch (error) {
+        console.log(error)
+        throw error.response.data;
+    }
+}

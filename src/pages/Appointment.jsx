@@ -126,23 +126,24 @@ const Appointment = () => {
                       <label htmlFor="datetime">Time</label>
                     </div>
                   </div>
-                  {/* <div className="col-md-6">
+                  <div className="col-12">
                     <div className="form-floating">
-                      <select name="" id="select1" className="form-select">
-                        <option value="1">Destination 1</option>
-                        <option value="2">Destination 2</option>
-                        <option value="3">Destination 3</option>
+                      <select name="" id="select1" className="form-select" required>
+                        <option>Select a Service</option>
+                        <option value="haircut">Haircut - $20</option>
+                        <option value="trim">Trim - $13</option>
+                        <option value="shave">Shave - $13</option>
+                        <option value="facial">Facial - $20</option>
                       </select>
-                      <label htmlFor="select1">Destination</label>
+                      <label htmlFor="select1">Type of Service</label>
                     </div>
-                  </div> */}
+                  </div>
                   <div className="col-12">
                     <div className="form-floating">
                       <textarea 
                         className="form-control" 
                         placeholder="Special Request" 
                         id="message"
-                        required
                         value={request}
                         onChange={(e) => setRequest(e.target.value)} 
                         style={{height: "100px"}}>
@@ -152,8 +153,8 @@ const Appointment = () => {
                   </div>
 
                   <div className="col-12">
-                    <Button type='submit' className='w-100' variant="outline-light">
-                      {loading ? <SpinnerComp /> : 'Book Now'}
+                    <Button disabled type='submit' className='w-100' variant="outline-light">
+                      {loading ? <SpinnerComp /> : 'Make Payment and Book'}
                     </Button>
                   </div>
 
